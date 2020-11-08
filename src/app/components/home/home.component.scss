@@ -1,0 +1,26 @@
+.container-cards {
+    background-color: #49DECF;
+    width: 500px;
+    height: 500px;
+    overflow-y: auto;
+}
+
+.container-card {
+    width: 100px;
+    height: 120px;
+    margin-top: 10px;
+    background-color: #5AABEB;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+    box-shadow: 5px 5px 5px #3559EB inset;
+    img {
+        width: 90px;
+        height: 85px;
+    }
+    div>h3 {
+        margin-right: 5px;
+        color: white;
+        text-shadow: 1px 1px 1px black;
+    }
+}

@@ -1,0 +1,15 @@
+<div class="container container-cards">
+    <div class="row">
+        <div *ngFor="let item of list" class="col col-sm-3">
+            <div class="container-card">
+                <img [src]="urlImage(item.id)" [alt]="item.name">
+                <div class="d-flex justify-content-end">
+                    <h3>{{item.id | number:'3.0-0'}}</h3>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="list.length === 0">
+            <h3 class="text-light">No existen elementos</h3>
+        </div>
+    </div>
+</div>
