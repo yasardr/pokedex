@@ -12,9 +12,6 @@ import { TransformDataService } from '../../services/transformData.service';
 })
 export class PokemonComponent implements OnInit {
 
-  /*@Output() previousEvent = new EventEmitter<number>();
-  this.previousEvent.emit(this.pokemon.id);*/
-
   pokemon = new PokemonModel();
   loading = true;
 
@@ -36,44 +33,6 @@ export class PokemonComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  previous(): void {
-    this.loading = true;
-    let id = this.pokemon.id;
-    id -= 1;
-    if (id === 0) {
-      this.loading = false;
-      return;
-    }
-    this.location.replaceState(`/pokemon/${id}`);
-    this.pokemonService.getPokemonId(id)
-        .subscribe(data => {
-          this.pokemon = this.transformDataService.transformDataPokemon(data);
-          this.getDescription(this.pokemon.id);
-          setTimeout(() => {
-            this.loading = false;
-          }, 1000);
-        });
-  }
-
-  next(): void {
-    this.loading = true;
-    let id = this.pokemon.id;
-    id += 1;
-    if (id > 893) {
-      this.loading = false;
-      return;
-    }
-    this.location.replaceState(`/pokemon/${id}`);
-    this.pokemonService.getPokemonId(id)
-        .subscribe(data => {
-          this.pokemon = this.transformDataService.transformDataPokemon(data);
-          this.getDescription(this.pokemon.id);
-          setTimeout(() => {
-            this.loading = false;
-          }, 1000);
-        });
   }
 
   getDescription(id: number): void {

@@ -1,6 +1,7 @@
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { PokemonService } from '../../../services/pokemon.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,6 @@ export class HeaderComponent implements OnInit {
 
   ban = false;
   loading: boolean;
-  error = false;
   ocultarCirculo = true;
   cambiar = '';
 
@@ -35,12 +35,16 @@ export class HeaderComponent implements OnInit {
     this.pokemonService.getPokemonName( termino )
       .subscribe((data: any) => {
         this.loading = false;
-        this.error = false;
         this.ban = false;
         this.router.navigate(['/pokemon', data.id]);
       }, error => {
         this.loading = false;
-        this.error = true;
+        this.ban = false;
+        Swal.fire({
+          title: 'Error!',
+          text: 'No existe',
+          icon: 'error'
+        });
       });
   }
 
