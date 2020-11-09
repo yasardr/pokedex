@@ -1,5 +1,5 @@
-<div class="container container-detail-pokemon">
-    <div class="card mb-3 container-data" *ngIf="!loading">
+<div class="container container-detail-pokemon animated fadeIn">
+    <div class="card mb-3 container-data animated fadeIn" *ngIf="!loading">
         <div class="row no-gutters">
             <div class="col-sm-4">
                 <img [src]="pokemon.image" class="card-img" alt="pokemon.name">
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="card container-dexcription" *ngIf="!loading">
+    <div class="card container-dexcription animated fadeIn" *ngIf="!loading">
         <div class="card-body">
             {{ pokemon.description }}
         </div>
