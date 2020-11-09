@@ -1,82 +1,86 @@
-    .container-header {
-        background: rgb(241, 11, 11);
-        background: radial-gradient(circle, rgba(241, 11, 11, 1) 0%, rgba(105, 6, 6, 1) 100%);
-        width: 510px;
-        height: 200px;
-        overflow-y: auto;
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-        box-shadow: 5px 5px 5px black;
-        border: 1px solid black;
-        border-radius: 15px 15px 5px 5px;
-    }
-    
-    .semi-circulo3 {
-        width: 300px;
-        height: 150px;
-        border: 2px solid black;
-        background: rgb(255, 255, 255);
-        background: radial-gradient(circle, rgba(255, 255, 255, 1) 54%, rgba(137, 148, 148, 1) 100%);
-        border-radius: 300px 300px 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    
-    .semi-circulo2 {
-        width: 250px;
-        height: 125px;
-        border: 2px solid black;
-        background: black;
-        border-radius: 250px 250px 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-    }
-    
-    .semi-circulo1 {
-        width: 150px;
-        height: 75px;
-        border: 2px solid black;
-        background: rgb(137, 148, 148);
-        background: radial-gradient(circle, rgba(137, 148, 148, 1) 0%, rgba(255, 255, 255, 1) 100%);
-        border-radius: 150px 150px 0 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .btns-header {
-            border-radius: 50%;
-            background-color: #394040;
-            color: white;
-            border: 1px solid white;
-            outline: none;
-        }
-    }
-    
-    .search {
-        width: 300px;
-        background-color: white;
-        z-index: 1;
-    }
-    
-    .loading {
-        z-index: 3;
-        color: white;
-    }
-    
-    .circulo {
-        width: 155px;
-        height: 155px;
+.container-header {
+    background: rgb(241, 11, 11);
+    background: radial-gradient(circle, rgba(241, 11, 11, 1) 0%, rgba(105, 6, 6, 1) 100%);
+    width: 510px;
+    height: 200px;
+    overflow-y: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    box-shadow: 5px 5px 5px black;
+    border: 1px solid black;
+    border-radius: 15px 15px 5px 5px;
+    background-image: url('../../../../assets/img/FondoS.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-x: center;
+}
+
+.semi-circulo3 {
+    width: 300px;
+    height: 150px;
+    border: 2px solid black;
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 54%, rgba(137, 148, 148, 1) 100%);
+    border-radius: 300px 300px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.semi-circulo2 {
+    width: 250px;
+    height: 125px;
+    border: 2px solid black;
+    background: black;
+    border-radius: 250px 250px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.semi-circulo1 {
+    width: 150px;
+    height: 75px;
+    border: 2px solid black;
+    background: rgb(137, 148, 148);
+    background: radial-gradient(circle, rgba(137, 148, 148, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 150px 150px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btns-header {
         border-radius: 50%;
-        background-color: #75D0E2;
-        position: absolute;
-        top: 143px;
-        z-index: 3;
-        cursor: pointer;
+        background-color: #394040;
+        color: white;
+        border: 1px solid white;
+        outline: none;
     }
-    
-    .circulo:hover {
-        background-color: #a3e2ed;
-    }
+}
+
+.search {
+    width: 300px;
+    background-color: white;
+    z-index: 1;
+}
+
+.loading {
+    z-index: 3;
+    color: white;
+}
+
+.circulo {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    background-color: #75D0E2;
+    position: absolute;
+    top: 143px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+.circulo:hover {
+    background-color: #a3e2ed;
+}
