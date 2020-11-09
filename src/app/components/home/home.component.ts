@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { PokemonService } from '../../services/pokemon.service';
 import { TransformDataService } from '../../services/transformData.service';
 
@@ -11,7 +12,8 @@ export class HomeComponent implements OnInit {
 
   public list = [];
 
-  constructor( private pokemonService: PokemonService,
+  constructor( private router: Router,
+               private pokemonService: PokemonService,
                private transformDataService: TransformDataService ) {
     this.pokemonService.getPokemones()
         .subscribe(data => {
@@ -20,6 +22,10 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getPokemon(id: number): void {
+    this.router.navigate(['/pokemon', id]);
   }
 
   urlImage(id: number): string {

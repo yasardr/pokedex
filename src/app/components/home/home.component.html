@@ -1,6 +1,6 @@
 <div class="container container-cards">
     <div class="row">
-        <div *ngFor="let item of list" class="col col-sm-3">
+        <div (click)="getPokemon( item.id )" *ngFor="let item of list" class="col col-sm-3">
             <div class="container-card">
                 <img [src]="urlImage(item.id)" [alt]="item.name">
                 <div class="d-flex justify-content-end">

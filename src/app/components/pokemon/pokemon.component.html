@@ -1,0 +1,39 @@
+<div class="container container-detail-pokemon">
+    <div style="height: 0;">
+        <button (click)="previous()" class="btns-header mr-2 btn-previous"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+        <button (click)="next()" class="btns-header mr-2 btn-next"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+    </div>
+    <div class="card mb-3 container-data" *ngIf="!loading">
+        <div class="row no-gutters">
+            <div class="col-sm-4">
+                <img [src]="pokemon.image" class="card-img" alt="pokemon.name">
+            </div>
+            <div class="col-sm-8">
+                <div class="card-body" style="color: white;">
+                    <h5 class="card-title ml-1 rounded border-bottom border-white">
+                        No.<span class="mr-3">{{pokemon.id | number:'3.0-0'}}</span> {{pokemon.name | uppercase}}
+                    </h5>
+                    <div class="card-text d-flex justify-content-between ml-1 rounded border-bottom border-white">
+                        <h5>TYPE</h5>
+                        <span class="badge badge-pill badge-primary mb-2 ml-1 border border-white" *ngFor="let item of pokemon.type">{{item | uppercase}}</span>
+                    </div>
+                    <div class="card-text d-flex justify-content-between ml-1 rounded border-bottom border-white">
+                        <h5>HEIGHT</h5>
+                        <h5>{{ pokemon.height }}'00"</h5>
+                    </div>
+                    <div class="card-text d-flex justify-content-between ml-1 rounded border-bottom border-white">
+                        <h5>WEIGHT</h5>
+                        <h5>{{ pokemon.weight }}.0 lbs.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card container-dexcription" *ngIf="!loading">
+        <div class="card-body">
+            {{ pokemon.description }}
+        </div>
+    </div>
+    <app-loading *ngIf="loading" class="m-5"></app-loading>
+</div>

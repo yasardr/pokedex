@@ -1,7 +1,7 @@
 .container-cards {
     background-color: #49DECF;
     width: 500px;
-    height: 500px;
+    height: 530px;
     overflow-y: auto;
 }
 
@@ -9,11 +9,12 @@
     width: 100px;
     height: 120px;
     margin-top: 10px;
-    background-color: #5AABEB;
+    background: rgb(8, 148, 227);
+    background: radial-gradient(circle, rgba(8, 148, 227, 1) 0%, rgba(3, 105, 147, 1) 100%);
     border: 2px solid white;
     border-radius: 10px;
     box-shadow: 5px 5px 5px black;
-    box-shadow: 5px 5px 5px #3559EB inset;
+    cursor: pointer;
     img {
         width: 90px;
         height: 85px;

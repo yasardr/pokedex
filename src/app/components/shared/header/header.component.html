@@ -1,0 +1,29 @@
+<div class="container container-header">
+    <div class="semi-circulo3">
+        <div class="semi-circulo2">
+            <div class="semi-circulo1">
+                <button class="btns-header mr-2" (click)="actionPrev()"><i class="fa fa-arrow-left" aria-hidden="true"></i></button>
+                <button class="btns-header mt-3" (click)="ban = !ban"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button class="btns-header ml-2" (click)="actionNext()"><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            </div>
+            <div class="circulo" *ngIf="ocultarCirculo" (click)="openPokedex()">
+                <h3 class="text-white ml-3 mt-5">POKÉDEX</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+    <div *ngIf="ban" style="height: 0;">
+        <div class="input-group mb-3 search" *ngIf="!loading">
+            <input #termino type="text" class="form-control" placeholder="Buscar Pokemon...">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="buscar(termino.value)">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <app-loading *ngIf="loading" class="m-5 loading"></app-loading>
+        <span class="badge badge-pill badge-secondary error" *ngIf="error">No existe</span>
+    </div>
+</div>

@@ -1,8 +1,11 @@
-<h1>Pokedex</h1>
-
-
 <div class="container">
-    <router-outlet></router-outlet>
+    <app-header (cambiarEvent)="action($event)" (ocultarEvent)="oculto = !$event" #header></app-header>
 </div>
 
-<h1>Footer</h1>
+<div class="container" *ngIf="oculto">
+    <router-outlet (previousEvent)="action($event)"></router-outlet>
+</div>
+
+<div class="container">
+    <app-footer (ocultarEvent)="oculto = $event; header.ocultarCirculo = !$event"></app-footer>
+</div>

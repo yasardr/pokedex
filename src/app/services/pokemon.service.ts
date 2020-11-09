@@ -21,10 +21,27 @@ export class PokemonService {
                     }) );
     }
 
-    /*getPokemon(id: number): Observable<any> {
-        return this.http.get(`${this.urlAPI}pokemon?limit=100&offset=0`)
+    /**
+     *  Obtener un pokemon dado su id
+     */
+    getPokemonId(id: number): Observable<any> {
+        return this.http.get(`${this.urlAPI}pokemon/${id}`);
+    }
+
+    /**
+     *  Obtener un pokemon dado su id
+     */
+    getPokemonName(name: string): Observable<any> {
+        return this.http.get(`${this.urlAPI}pokemon/${name}`);
+    }
+
+    /**
+     * Obtener la descripción del pokemon
+     */
+    getPokemonDescription(id: number): Observable<any> {
+        return this.http.get(`${this.urlAPI}pokemon-species/${id}`)
                     .pipe( map(data => {
-                        return data[`results`];
+                        return data[`flavor_text_entries`];
                     }) );
-    }*/
+    }
 }
