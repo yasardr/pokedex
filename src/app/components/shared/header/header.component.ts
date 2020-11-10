@@ -30,6 +30,8 @@ export class HeaderComponent implements OnInit {
       return;
     }
 
+    termino = termino.toLowerCase();
+
     this.loading = true;
 
     this.pokemonService.getPokemonName( termino )

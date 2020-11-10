@@ -54,3 +54,17 @@
 .fadeIn {
     animation-name: fadeIn;
 }
+
+
+/* Desde 0px hasta 575px de pantalla*/
+
+@media(max-width: 575px) {
+    .container-image {
+        display: flex;
+        justify-content: center;
+        img {
+            height: 220px;
+            width: auto;
+        }
+    }
+}

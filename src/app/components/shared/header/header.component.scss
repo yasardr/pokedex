@@ -84,3 +84,12 @@
 .circulo:hover {
     background-color: #a3e2ed;
 }
+
+
+/* Desde 0px hasta 540px de pantalla*/
+
+@media(max-width: 540px) {
+    .search {
+        margin-left: 200px;
+    }
+}
